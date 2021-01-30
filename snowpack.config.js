@@ -10,7 +10,12 @@ module.exports = {
     },
     src: "/dist",
   },
-  plugins: ["@snowpack/plugin-typescript"],
+  plugins: ["@snowpack/plugin-react-refresh", "@snowpack/plugin-typescript"],
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: "es2018",
+  },
   packageOptions: {
     /* ... */
   },
